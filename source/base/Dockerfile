@@ -21,7 +21,5 @@ RUN apk -U upgrade \
   && curl -sSf https://radicle.xyz/install | sh
 
 ENV PATH=/root/.radicle/bin:$PATH
-ENV RAD_ALIAS="radicle"
-ENV RAD_PASSPHRASE=""
 
-RUN rad auth --alias $RAD_ALIAS
+VOLUME /root/.radicle
